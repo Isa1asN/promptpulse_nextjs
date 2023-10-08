@@ -1,3 +1,5 @@
+import Feed from "@components/Feed"
+
 
 function Home() {
   return (
@@ -10,6 +12,7 @@ function Home() {
 
         <p className="desc text-center">PromptPulse is a tool for the modern world to discover, create and share creative prompts</p>
 
+        <Feed />
     </section>
   )
 }
