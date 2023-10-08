@@ -9,6 +9,7 @@ import {signIn, signOut, useSession, getProviders} from 'next-auth'
 const Nav = () => {
   const isUserLoggedIn = true
   const [providers, setProviders] = useState(null)
+  const [toggleDropdown, setToggleDropdown] = useState(false)
   useEffect(()=>{
       const setProviders = async ()=>{
         const response = await getProviders()
@@ -54,7 +55,33 @@ const Nav = () => {
                     }
                 </>}
       </div>
-      
+
+      {/* Mobile Navigation */}
+      <div className='sm:hidden flex relative'>
+        {isUserLoggedIn ? (
+          <div className='flex'>
+              <Image src={newuser} width={37} height={37} alt='pro_img' className='rounded-full' onClick={() => setToggleDropdown((prev) => !prev)}/>
+              {toggleDropdown && (
+                <div className='dropdown'>
+                  <Link href='/profile' className='dropdown_link' onClick={()=>setToggleDropdown(false)}> My Profile 
+                  </Link>
+
+                </div>
+              )}
+          </div>
+        ) :  
+        <>
+        {providers && Object.values(providers).map((provider) => (
+          <button  type='button' key={provider.name} onClick={()=>signIn(provider.id)} className='black_btn'>
+              Sign In
+          </button>
+        ))
+
+        }
+        </>
+        }
+
+      </div>
     </nav>
   )
 }
