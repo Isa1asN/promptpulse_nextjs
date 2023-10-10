@@ -5,6 +5,7 @@ import logo from '@public/assets/logo.svg'
 import { useState, useEffect } from 'react'
 import {signIn, signOut, useSession, getProviders} from 'next-auth/react'
 
+// the auth/provider issue needs to be resolved
 const Nav = () => {
   const {data: session} = useSession()
 
