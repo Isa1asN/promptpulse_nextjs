@@ -59,7 +59,7 @@ const Nav = () => {
 
       {/* For Mobile Navigation */}
       <div className='sm:hidden flex relative'>
-        {isUserLoggedIn ? (
+        {session?.user ? (
           <div className='flex'>
               <Image src={newuser} width={37} height={37} alt='pro_img' className='rounded-full' onClick={() => setToggleDropdown((prev) => !prev)}/>
               {toggleDropdown && (
