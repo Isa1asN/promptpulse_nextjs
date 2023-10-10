@@ -56,7 +56,7 @@ const Nav = () => {
                 </>}
       </div>
 
-      {/* Mobile Navigation */}
+      {/* For Mobile Navigation */}
       <div className='sm:hidden flex relative'>
         {isUserLoggedIn ? (
           <div className='flex'>
