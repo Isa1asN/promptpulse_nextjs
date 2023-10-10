@@ -4,7 +4,7 @@ import Image from 'next/image'
 import logo from '@public/assets/logo.svg'
 import newuser from '@public/assets/newuser.png'
 import { useState, useEffect } from 'react'
-import {signIn, signOut, useSession, getProviders} from 'next-auth'
+import {signIn, signOut, useSession, getProviders} from 'next-auth/react'
 
 const Nav = () => {
   const {data: session} = useSession()
@@ -33,7 +33,7 @@ const Nav = () => {
       </Link>
       {/* for desktop navigation   */}
       <div className='sm:flex hidden'>
-        {isUserLoggedIn ? <div className='flex gap-3 md:gap-5'>
+        {session?.user ? <div className='flex gap-3 md:gap-5'>
           <Link href="/create-prompt" className='black_btn'>
             Create Post
           </Link>
