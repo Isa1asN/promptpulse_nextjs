@@ -2,7 +2,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import logo from '@public/assets/logo.svg'
-import newuser from '@public/assets/newuser.png'
 import { useState, useEffect } from 'react'
 import {signIn, signOut, useSession, getProviders} from 'next-auth/react'
 
