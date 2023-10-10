@@ -8,6 +8,8 @@
   Note: The styles for this gradient grid background is heavily inspired by the creator of this amazing site (https://dub.sh) – all credits go to them! 
 */
 
+
+
 .main {
   width: 100vw;
   min-height: 100vh;
@@ -17,9 +19,9 @@
   padding: 120px 24px 160px 24px;
   pointer-events: none;
 }
-
+  
 .main:before {
-  background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #fafafa 100%);
+  background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #87c3c6 100%);
   position: absolute;
   content: "";
   z-index: 2;
@@ -47,7 +49,7 @@
   max-width: 640px;
   background-image: radial-gradient(
       at 27% 37%,
-      hsla(215, 98%, 61%, 1) 0px,
+      rgb(20, 21, 21) 0px,
       transparent 0%
     ),
     radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%),

@@ -1,5 +1,5 @@
 import Feed from "@components/Feed"
-
+import '@styles/global.css'
 
 function Home() {
   return (
@@ -18,4 +18,3 @@ function Home() {
 }
 
 export default Home
-4022078313
